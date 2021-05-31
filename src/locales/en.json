@@ -1,0 +1,57 @@
+{
+  "title": "Sadr Engineering",
+  "Admin": "Ali Aslani",
+  "search": "Search",
+  "nav": [{
+      "icon": "mdi-view-dashboard",
+      "title": "dashboard",
+      "to": "/en/"
+    },
+    {
+      "icon": "mdi-account",
+      "title": "user",
+      "to": "/en/pages/user"
+    },
+    {
+      "title": "rtables",
+      "icon": "mdi-clipboard-outline",
+      "to": "/en/tables/regular-tables"
+    },
+    {
+      "title": "typography",
+      "icon": "mdi-format-font",
+      "to": "/en/components/typography"
+    },
+    {
+      "title": "icons",
+      "icon": "mdi-chart-bubble",
+      "to": "/en/components/icons"
+    },
+    {
+      "title": "google",
+      "icon": "mdi-map-marker",
+      "to": "/en/maps/google-maps"
+    },
+    {
+      "title": "notifications",
+      "icon": "mdi-bell",
+      "to": "/en/components/notifications"
+    }
+  ],
+  "weatherCases": "Weather Of Some Countrys",
+  "city": "City",
+  "flag": "Flag",
+  "description": "Description",
+  "followers": "Followers",
+  "jsutUpdated": "Just Updated",
+  "UserRegister": "User Registrations",
+  "LastCampaignPerformance": "Last Campaign Performance",
+  "lastRegiter": "last registration 26 minutes ago",
+  "ManageListings": "Manage Listings",
+  "cardTitle": "Top 10 Australian beaches",
+  "cardDate": "Number 10",
+  "cardlocation": "Whitehaven Beach",
+  "cardAddress": "Whitsunday Island, Whitsunday Islands",
+  "explore": "EXPLORE",
+  "share": "SHARE"
+}
