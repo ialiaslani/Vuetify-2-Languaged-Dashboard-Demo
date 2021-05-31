@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    
     <v-navigation-drawer
       id="navigation-drawer"
       :dark="barColor !== 'rgba(228, 226, 226, 1), rgba(255, 255, 255, 0.7)'"
