@@ -1,0 +1,57 @@
+{
+    "title": "مهندسی صدر",
+    "Admin": "علی اصلانی",
+    "search": "جست و جو",
+    "nav": [{
+            "icon": "mdi-view-dashboard",
+            "title": "داشبورد",
+            "to": "/ps"
+        },
+        {
+            "icon": "mdi-account",
+            "title": "کاربر",
+            "to": "/ps/pages/user"
+        },
+        {
+            "title": "جدول ها",
+            "icon": "mdi-clipboard-outline",
+            "to": "/ps/tables/regular-tables"
+        },
+        {
+            "title": "فونتها",
+            "icon": "mdi-format-font",
+            "to": "/ps/components/typography"
+        },
+        {
+            "title": "آیکون ها",
+            "icon": "mdi-chart-bubble",
+            "to": "/ps/components/icons"
+        },
+        {
+            "title": "گوگل",
+            "icon": "mdi-map-marker",
+            "to": "/ps/maps/google-maps"
+        },
+        {
+            "title": "اعلان ها",
+            "icon": "mdi-bell",
+            "to": "/ps/components/notifications"
+        }
+    ],
+    "weatherCases": "شرایط آب و هوایی برخی کشور ها",
+    "city": "شهر",
+    "flag": "پرچم",
+    "description": "توضیحات",
+    "followers": "دنبال کننده ها",
+    "jsutUpdated": "اخیرا به روز شده",
+    "UserRegister": "ثبت نام کاربر ها",
+    "LastCampaignPerformance": "اتفاقات اخیر",
+    "lastRegiter": "آخرین ثبت نام 26 دقیقه پیش",
+    "ManageListings": "کنترل لیست",
+    "cardTitle": "10 ساحل برتر استرالیا",
+    "cardDate": "نوامبر 10",
+    "cardlocation": "ساحل بهشت سفید",
+    "cardAddress": "جزیره ویتساندی",
+    "explore": "بیشتر",
+    "share": "اشتراک گذاری"
+}
