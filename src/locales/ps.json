@@ -1,43 +1,30 @@
 {
     "title": "مهندسی صدر",
     "Admin": "مدیر",
+    "navMP": "پ",
+    "navMyProfile": "پروفایل من",
+    "navEP": "ب",
+    "navEditProfile": "بوزرسانی پروفایل",
+    "navSE": "ت",
+    "navSettings": "تنظیمات",
+    "navDashboard": "داشبورد",
+    "navPictures": "عکس ها",
+    "navPR": "ق",
+    "navPricing": "قیمت گذاری",
+    "navLP": "و",
+    "navLoginPage": "صفحه ورود",
+    "navUP": "ک",
+    "navUserPage": "صفحه کاربر",
+    "navErrorPage": "صفحه ارور",
+    "navForms": "فرم ها",
+    "navMaps": "نقشه ها",
+    "navWidgets": "ابزارک ها",
+    "navCharts": "نمودار ها",
+    "nf1": "مایک به ایمیل شما جواب داد",
+    "nf2": "شما 5 تسک جدید دارید",
+    "nf3": "هم اکنون با اندرو دوست هستید",
+    "nf4": "و یک اعلان دیگر",
     "search": "جست و جو",
-    "nav": [{
-            "icon": "mdi-view-dashboard",
-            "title": "داشبورد",
-            "to": "/ps"
-        },
-        {
-            "icon": "mdi-account",
-            "title": "کاربر",
-            "to": "/ps/pages/user"
-        },
-        {
-            "title": "جدول ها",
-            "icon": "mdi-clipboard-outline",
-            "to": "/ps/tables/regular-tables"
-        },
-        {
-            "title": "فونتها",
-            "icon": "mdi-format-font",
-            "to": "/ps/components/typography"
-        },
-        {
-            "title": "آیکون ها",
-            "icon": "mdi-chart-bubble",
-            "to": "/ps/components/icons"
-        },
-        {
-            "title": "گوگل",
-            "icon": "mdi-map-marker",
-            "to": "/ps/maps/google-maps"
-        },
-        {
-            "title": "اعلان ها",
-            "icon": "mdi-bell",
-            "to": "/ps/components/notifications"
-        }
-    ],
     "weatherCases": "شرایط آب و هوایی برخی کشور ها",
     "city": "شهر",
     "flag": "پرچم",
@@ -47,11 +34,19 @@
     "UserRegister": "ثبت نام کاربر ها",
     "LastCampaignPerformance": "اتفاقات اخیر",
     "lastRegiter": "آخرین ثبت نام 26 دقیقه پیش",
+    "DailySells": "فروش روزانه",
+    "sells": "55% افزایش فروش در امروز",
+    "lastUp4": "بروزرسانی در 4 دقیقه پیش",
+    "CompeletedTask": "انجام شده ها",
+    "LastLastCampaignPerformance": "اتفاقات اخیر اخیر",
+    "lastUp10": "بروزرسانی در 10 دقیقه پیش",
     "ManageListings": "کنترل لیست",
     "cardTitle": "10 ساحل برتر استرالیا",
     "cardDate": "نوامبر 10",
     "cardlocation": "ساحل بهشت سفید",
-    "cardAddress": "جزیره ویتساندی",
-    "explore": "بیشتر",
-    "share": "اشتراک گذاری"
+    "cardAddress": "این مکان نزدیک به ساحل های بارسلونا و ایستگاه اوتوبوس است که فاصله آن ها تنها 2 دقیقه پیاده روی تا ایستگاه اوتوبوس است!",
+    "made": "ساخته شده با",
+    "by": "به وسیله",
+    "CreativeTim": "تیم خلاق",
+    "2019": "برای یک وب بهتر ، 2019"
 }

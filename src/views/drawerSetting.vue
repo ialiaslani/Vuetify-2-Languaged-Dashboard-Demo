@@ -4,11 +4,11 @@
       color="grey darken-2 rounded-lg"
       height="40"
       width="80"
+      :class="$i18n.locale == 'ps' ? 'left-1' : 'right-1'"
       style="
         opacity: 0.75;
         position: fixed;
         top: 23%;
-        right: -1%;
         z-index: 100;
         cursor: pointer;
       "
@@ -20,13 +20,8 @@
       color="white rounded"
       width="300"
       elevation="5"
-      style="
-        position: fixed;
-        top: 23%;
-        right: 3%;
-        z-index: 100;
-        cursor: pointer;
-      "
+      :class="$i18n.locale == 'ps' ? 'left-3' : 'right-3'"
+      style="position: fixed; top: 23%; z-index: 100; cursor: pointer"
       class="px-3"
     >
       <v-divider color="black" class="mt-3"></v-divider>
@@ -76,5 +71,17 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.right-1 {
+  right: -1%;
+}
+.left-1 {
+  left: -1%;
+}
+.right-3 {
+  right: 3%;
+}
+.left-3 {
+  left: 3%;
+}
 </style>

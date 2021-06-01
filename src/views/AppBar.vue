@@ -50,14 +50,23 @@
       <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on" class="ml-2" min-width="0" text>
           <v-badge overlap color="red">
-            <template v-slot:badge> 5 </template>
+            <template v-slot:badge> 4 </template>
             <v-icon>mdi-bell</v-icon></v-badge
           >
         </v-btn>
       </template>
       <v-list>
-        <v-list-item v-for="(item, index) in items" :key="index" link>
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        <v-list-item link>
+          <v-list-item-title>{{ $t("nf1") }}</v-list-item-title>
+        </v-list-item>
+        <v-list-item link>
+          <v-list-item-title>{{ $t("nf2") }}</v-list-item-title>
+        </v-list-item>
+        <v-list-item link>
+          <v-list-item-title>{{ $t("nf3") }}</v-list-item-title>
+        </v-list-item>
+        <v-list-item link>
+          <v-list-item-title>{{ $t("nf4") }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>

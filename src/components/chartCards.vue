@@ -87,14 +87,14 @@
           <v-icon color="info">mdi-share-variant</v-icon>
         </v-row>
         <v-card-text class="pt-0">
-          <div class="title font-weight-light mb-2">Daily Sales</div>
+          <div class="title font-weight-light mb-2">{{ $t("DailySells") }}</div>
           <div class="subheading font-weight-light grey--text">
-            55% increase in today's sales
+            {{ $t("sells") }}
           </div>
           <v-divider class="my-2"></v-divider>
           <v-icon class="mr-2" small> mdi-clock </v-icon>
           <span class="caption grey--text font-weight-light">
-            updated 4 minutes ago</span
+            {{ $t("lastUp4") }}</span
           >
         </v-card-text>
       </v-card></v-col
@@ -137,15 +137,17 @@
           <v-icon color="info">mdi-share-variant</v-icon>
         </v-row>
         <v-card-text class="pt-0">
-          <div class="title font-weight-light mb-2">Completed Tasks</div>
+          <div class="title font-weight-light mb-2">
+            {{ $t("CompeletedTask") }}
+          </div>
           <div class="subheading font-weight-light grey--text">
-            Last Last Campaign Performance
+            {{ $t("LastLastCampaignPerformance") }}
           </div>
           <v-divider class="my-2"></v-divider>
           <v-icon class="mr-2" small> mdi-clock </v-icon>
-          <span class="caption grey--text font-weight-light"
-            >updated 10 minutes ago</span
-          >
+          <span class="caption grey--text font-weight-light">{{
+            $t("lastUp10")
+          }}</span>
         </v-card-text>
       </v-card></v-col
     >

@@ -3,7 +3,7 @@
     <v-container>
       <v-row align="center" no-gutters>
         <v-col
-          v-for="(link, i) in links"
+          v-for="(link, i) in translatedLinks"
           :key="i"
           class="text-center mb-sm-0 mb-5"
           cols="auto"
@@ -21,13 +21,15 @@
 
         <v-col cols="12" md="auto">
           <div class="body-1 font-weight-light pt-6 pt-md-0 text-center">
-            &copy; 2019, made with
+            &copy; {{ $t("made") }}
             <v-icon size="18"> mdi-heart </v-icon>
-            by
-            <a href="https://www.creative-tim.com" class="text-decoration-none"
-              >Creative Tim</a
+            {{ $t("by") }}
+            <a
+              href="https://www.creative-tim.com"
+              class="text-decoration-none"
+              >{{ $t("CreativeTim") }}</a
             >
-            for a better web.
+            {{ $t("2019") }}
           </div>
         </v-col>
       </v-row>
@@ -36,9 +38,15 @@
 </template>
 
 <script>
+import i18n from "../i18n";
 export default {
   name: "DashboardFooter",
-
+  computed: {
+    translatedLinks() {
+      if (i18n.locale == "ps") return this.faLink;
+      else if (i18n.locale == "en") return this.links;
+    },
+  },
   data: () => ({
     links: [
       {
@@ -56,6 +64,24 @@ export default {
       {
         href: "#",
         text: "Licenses",
+      },
+    ],
+    faLink: [
+      {
+        href: "#",
+        text: "تیم خلاق",
+      },
+      {
+        href: "#",
+        text: "درباره ما",
+      },
+      {
+        href: "#",
+        text: "بلاگ",
+      },
+      {
+        href: "#",
+        text: "اعتبارسنجی",
       },
     ],
   }),

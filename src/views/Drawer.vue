@@ -44,23 +44,23 @@
             <v-list-item-title v-text="$t('Admin')" />
           </template>
           <v-list-item class="rounded-lg" link>
-            <h5 class="mx-1 font-weight-thin">MP</h5>
-            <v-list-item-title class="font-weight-light"
-              >My Profile</v-list-item-title
-            >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navMP") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navMyProfile")
+            }}</v-list-item-title>
           </v-list-item>
           <v-list-item class="rounded-lg" link>
-            <h5 class="mx-1 font-weight-thin">EP</h5>
-            <v-list-item-title class="font-weight-light"
-              >Edit Profile</v-list-item-title
-            >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navEP") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navEditProfile")
+            }}</v-list-item-title>
           </v-list-item>
 
           <v-list-item class="rounded-lg" link>
-            <h5 class="mx-1 font-weight-thin">SE</h5>
-            <v-list-item-title class="font-weight-light"
-              >Settings</v-list-item-title
-            >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navSE") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navSettings")
+            }}</v-list-item-title>
           </v-list-item>
         </v-list-group>
       </v-list-item-group>
@@ -75,43 +75,43 @@
             <v-icon>mdi-view-dashboard</v-icon>
           </v-list-item-icon>
 
-          <v-list-item-title class="font-weight-light"
-            >Dashboard</v-list-item-title
-          >
+          <v-list-item-title class="font-weight-light">{{
+            $t("navDashboard")
+          }}</v-list-item-title>
         </v-list-item>
 
         <v-list-group :value="true" prepend-icon="mdi-image">
           <template v-slot:activator>
-            <v-list-item-title class="font-weight-light"
-              >Pictures</v-list-item-title
-            >
+            <v-list-item-title class="font-weight-light">{{
+              $t("navPictures")
+            }}</v-list-item-title>
           </template>
 
           <v-list-item class="rounded-lg">
-            <h5 class="mx-1 font-weight-thin">PR</h5>
-            <v-list-item-title class="font-weight-light"
-              >Pricing</v-list-item-title
-            >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navPR") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navPricing")
+            }}</v-list-item-title>
           </v-list-item>
           <v-list-item class="rounded-lg">
-            <h5 class="mx-1 font-weight-thin">LP</h5>
-            <v-list-item-title class="font-weight-light"
-              >Login Page</v-list-item-title
-            >
-          </v-list-item>
-
-          <v-list-item class="rounded-lg">
-            <h5 class="mx-1 font-weight-thin">UP</h5>
-            <v-list-item-title class="font-weight-light"
-              >User Profile</v-list-item-title
-            >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navLP") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navLoginPage")
+            }}</v-list-item-title>
           </v-list-item>
 
           <v-list-item class="rounded-lg">
-            <h5 class="mx-1 font-weight-thin">EP</h5>
-            <v-list-item-title class="font-weight-light"
-              >Error Profile</v-list-item-title
-            >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navUP") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navUserPage")
+            }}</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item class="rounded-lg">
+            <h5 class="mx-1 font-weight-thin">{{ $t("navEP") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navErrorPage")
+            }}</v-list-item-title>
           </v-list-item>
         </v-list-group>
       </v-list-item-group>
@@ -121,7 +121,9 @@
           <v-icon>mdi-clipboard-outline</v-icon>
         </v-list-item-icon>
 
-        <v-list-item-title class="font-weight-light">Forms</v-list-item-title>
+        <v-list-item-title class="font-weight-light">{{
+          $t("navForms")
+        }}</v-list-item-title>
       </v-list-item>
 
       <v-list-item link class="rounded-lg">
@@ -129,7 +131,9 @@
           <v-icon>mdi-map-marker</v-icon>
         </v-list-item-icon>
 
-        <v-list-item-title class="font-weight-light">Maps</v-list-item-title>
+        <v-list-item-title class="font-weight-light">{{
+          $t("navMaps")
+        }}</v-list-item-title>
       </v-list-item>
 
       <v-list-item link class="rounded-lg">
@@ -137,7 +141,9 @@
           <v-icon>mdi-widgets</v-icon>
         </v-list-item-icon>
 
-        <v-list-item-title class="font-weight-light">Widgets</v-list-item-title>
+        <v-list-item-title class="font-weight-light">{{
+          $t("navWidgets")
+        }}</v-list-item-title>
       </v-list-item>
 
       <v-list-item link class="rounded-lg">
@@ -145,7 +151,9 @@
           <v-icon>mdi-chart-timeline</v-icon>
         </v-list-item-icon>
 
-        <v-list-item-title class="font-weight-light">Charts</v-list-item-title>
+        <v-list-item-title class="font-weight-light">{{
+          $t("navCharts")
+        }}</v-list-item-title>
       </v-list-item>
     </v-list>
   </v-navigation-drawer>

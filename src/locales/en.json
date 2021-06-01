@@ -1,43 +1,30 @@
 {
   "title": "Sadr Engineering",
   "Admin": "Admin",
+  "navMP": "MP",
+  "navMyProfile": "My Profile",
+  "navEP": "EP",
+  "navEditProfile": "Edit Profile",
+  "navSE": "SE",
+  "navSettings": "Settings",
+  "navDashboard": "Dashboard",
+  "navPictures": "Picures",
+  "navPR": "PR",
+  "navPricing": "Pricing",
+  "navLP": "LP",
+  "navLoginPage": "Login Page",
+  "navUP": "UP",
+  "navUserPage": "User Page",
+  "navErrorPage": "Error Page",
+  "navForms": "Forms",
+  "navMaps": "Maps",
+  "navWidgets": "Widgets",
+  "navCharts": "Charts",
+  "nf1": "Mike John Responded to your email",
+  "nf2": "You have 5 new tasks",
+  "nf3": "You're now friends with Andrew",
+  "nf4": "Another Notification",
   "search": "Search",
-  "nav": [{
-      "icon": "mdi-view-dashboard",
-      "title": "dashboard",
-      "to": "/en/"
-    },
-    {
-      "icon": "mdi-account",
-      "title": "user",
-      "to": "/en/pages/user"
-    },
-    {
-      "title": "rtables",
-      "icon": "mdi-clipboard-outline",
-      "to": "/en/tables/regular-tables"
-    },
-    {
-      "title": "typography",
-      "icon": "mdi-format-font",
-      "to": "/en/components/typography"
-    },
-    {
-      "title": "icons",
-      "icon": "mdi-chart-bubble",
-      "to": "/en/components/icons"
-    },
-    {
-      "title": "google",
-      "icon": "mdi-map-marker",
-      "to": "/en/maps/google-maps"
-    },
-    {
-      "title": "notifications",
-      "icon": "mdi-bell",
-      "to": "/en/components/notifications"
-    }
-  ],
   "weatherCases": "Weather Of Some Countrys",
   "city": "City",
   "flag": "Flag",
@@ -47,11 +34,19 @@
   "UserRegister": "User Registrations",
   "LastCampaignPerformance": "Last Campaign Performance",
   "lastRegiter": "last registration 26 minutes ago",
+  "DailySells": "Daily Sales",
+  "sells": "55% increase in today's sales  ",
+  "lastUp4": " updated 4 minutes ago",
+  "CompeletedTask": "Completed Tasks",
+  "LastLastCampaignPerformance": "Last Last Campaign Performance",
+  "lastUp10": "updated 10 minutes ago",
   "ManageListings": "Manage Listings",
   "cardTitle": "Top 10 Australian beaches",
   "cardDate": "Number 10",
   "cardlocation": "Whitehaven Beach",
   "cardAddress": "The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to Naviglio where you can enjoy the life in Barcelona.",
-  "explore": "EXPLORE",
-  "share": "SHARE"
+  "made": "made with",
+  "by": "by",
+  "CreativeTim": "Creative Tim",
+  "2019": "for a better web, 2019"
 }
