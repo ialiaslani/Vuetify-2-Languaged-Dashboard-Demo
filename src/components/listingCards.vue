@@ -1,43 +1,41 @@
 <template>
   <v-card
-    class="mx-auto rounded-lg listing-card"
-    max-width="350"
+    class="mx-2 rounded listing-card"
+    min-width="300"
     style="position: relative"
     elevation="5"
   >
     <v-img
       class="white--text align-end rounded-lg listing-card-img"
-      height="200px"
+      height="250px"
       width="95%"
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
     >
     </v-img>
-    <v-sheet height="200px" class="d-flex flex-column">
+    <v-sheet height="240px" class="d-flex flex-column">
       <v-spacer></v-spacer>
       <v-spacer></v-spacer>
-      <v-row height="20px" align="center" justify="center">
-        <v-icon color="info">mdi-account</v-icon>
+      <v-row height="30px" align="center" justify="center">
+        <v-icon class="pt-10" color="info">mdi-account</v-icon>
         <div class="mx-2"></div>
-        <v-icon color="info">mdi-pencil</v-icon>
+        <v-icon class="pt-10" color="info">mdi-pencil</v-icon>
         <div class="mx-2"></div>
-        <v-icon color="info">mdi-share-variant</v-icon>
+        <v-icon class="pt-10" color="info">mdi-share-variant</v-icon>
       </v-row>
     </v-sheet>
-    <v-card-title>{{ $t("cardTitle") }}</v-card-title>
+    <v-card-title class="font-weight-light d-block text-center">{{
+      $t("cardTitle")
+    }}</v-card-title>
 
-    <v-card-subtitle class="pb-0">{{ $t("cardDate") }}</v-card-subtitle>
-
-    <v-card-text class="text--primary">
-      <div>{{ $t("cardlocation") }}</div>
-
-      <div>{{ $t("cardAddress") }}</div>
+    <v-card-text class="text--muted font-weight-light d-block text-center">
+      {{ $t("cardAddress") }}
     </v-card-text>
-
-    <v-card-actions>
-      <v-btn color="gray" text> {{ $t("share") }} </v-btn>
-
-      <v-btn color="gray" text> {{ $t("explore") }} </v-btn>
-    </v-card-actions>
+    <v-divider class="mx-2"></v-divider>
+    <v-card-subtitle class="d-flex"
+      >{{ $t("cardDate") }} <v-spacer></v-spacer>
+      <v-icon color="muted mx-1">mdi-map-marker</v-icon>
+      {{ $t("cardlocation") }}</v-card-subtitle
+    >
   </v-card>
 </template>
 
@@ -52,6 +50,8 @@ export default {};
   top: -5%;
   transition: 300ms;
   z-index: 50;
+  box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
+    0px 5px 8px 0px rgb(0 0 0 / 14%), 0px 1px 14px 0px rgb(0 0 0 / 12%) !important;
 }
 .listing-card:hover .listing-card-img {
   top: -15%;

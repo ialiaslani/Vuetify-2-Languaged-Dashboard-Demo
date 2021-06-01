@@ -12,28 +12,39 @@
         />
       </v-col>
     </v-row>
-    <h3 class="mx-4 font-weight-light">{{ $t("ManageListings") }}</h3>
+    <h3 class="mx-5 my-9 font-weight-light">{{ $t("ManageListings") }}</h3>
     <v-row class="mx-4">
       <v-col v-for="wc in 3" :key="wc" class="pa-0 my-10">
         <listing-cards />
       </v-col>
     </v-row>
+    <DashboardFooter />
+    <drawer-setting />
   </div>
 </template>
 
 <script>
 import ChartCards from "../components/chartCards.vue";
+import DashboardFooter from "../components/Footer.vue";
 import globalSells from "../components/globalSells.vue";
 import ListingCards from "../components/listingCards.vue";
 import WidgetCard from "../components/widgetCard.vue";
+import DrawerSetting from "./drawerSetting.vue";
 export default {
-  components: { globalSells, ChartCards, WidgetCard, ListingCards },
+  components: {
+    globalSells,
+    ChartCards,
+    WidgetCard,
+    ListingCards,
+    DashboardFooter,
+    DrawerSetting,
+  },
   data() {
     return {
       widgetCards: [
         {
           icon: "mdi-twitter",
-          color: "info",
+          color: "cyan",
           number: 5000,
         },
         {
@@ -43,7 +54,7 @@ export default {
         },
         {
           icon: "mdi-poll",
-          color: "primary",
+          color: "pink",
           number: 75.521,
         },
         {

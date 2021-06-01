@@ -1,6 +1,6 @@
 <template>
   <v-sheet
-    class="mx-5 my-15 rounded-lg pb-5"
+    class="mx-5 my-15 rounded pb-5"
     color="white"
     style="position: relative"
     elevation="5"
@@ -8,11 +8,11 @@
     <v-sheet
       color="success"
       elevation="5"
-      height="100"
-      width="100"
+      height="90"
+      width="90"
       style="position: absolute; top: -5%"
       :class="$i18n.locale == 'ps' ? 'right-15' : 'left-15'"
-      class="d-flex justify-center align-center rounded-lg"
+      class="d-flex justify-center align-center rounded"
     >
       <v-icon color="white" large>mdi-earth</v-icon>
     </v-sheet>
@@ -72,9 +72,9 @@ export default {
 
 <style>
 .left-15 {
-  left: 1.5%;
+  left: 0.75rem;
 }
 .right-15 {
-  right: 1.5%;
+  right: 0.75rem;
 }
 </style>

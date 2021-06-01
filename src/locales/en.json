@@ -1,6 +1,6 @@
 {
   "title": "Sadr Engineering",
-  "Admin": "Ali Aslani",
+  "Admin": "Admin",
   "search": "Search",
   "nav": [{
       "icon": "mdi-view-dashboard",
@@ -51,7 +51,7 @@
   "cardTitle": "Top 10 Australian beaches",
   "cardDate": "Number 10",
   "cardlocation": "Whitehaven Beach",
-  "cardAddress": "Whitsunday Island, Whitsunday Islands",
+  "cardAddress": "The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to Naviglio where you can enjoy the life in Barcelona.",
   "explore": "EXPLORE",
   "share": "SHARE"
 }

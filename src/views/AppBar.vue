@@ -45,10 +45,24 @@
     <v-btn class="ml-2" min-width="0" text :to="`/${$i18n.locale}/`">
       <v-icon>mdi-view-dashboard</v-icon>
     </v-btn>
+
+    <v-menu offset-y>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn v-bind="attrs" v-on="on" class="ml-2" min-width="0" text>
+          <v-badge overlap color="red">
+            <template v-slot:badge> 5 </template>
+            <v-icon>mdi-bell</v-icon></v-badge
+          >
+        </v-btn>
+      </template>
+      <v-list>
+        <v-list-item v-for="(item, index) in items" :key="index" link>
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+
     <v-btn class="ml-2" min-width="0" text :to="`/${$i18n.locale}/about`">
-      <v-icon>mdi-bell</v-icon>
-    </v-btn>
-    <v-btn class="ml-2" min-width="0" text :to="`/${$i18n.locale}/user`">
       <v-icon>mdi-account</v-icon>
     </v-btn>
 
@@ -79,6 +93,14 @@ export default {
       default: false,
     },
   },
+  data: () => ({
+    items: [
+      { title: "Mike John Responded to your email" },
+      { title: "You have 5 new tasks" },
+      { title: "You're now friends with Andrew" },
+      { title: "Another Notification" },
+    ],
+  }),
   created() {
     if (i18n.locale == "ps") this.$vuetify.rtl = true;
     else if (i18n.locale == "en") this.$vuetify.rtl = false;
