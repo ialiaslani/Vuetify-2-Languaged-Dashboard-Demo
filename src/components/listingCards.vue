@@ -9,7 +9,7 @@
       class="white--text align-end rounded-lg listing-card-img"
       height="250px"
       width="95%"
-      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+      :src="`https://demos.creative-tim.com/vue-material-dashboard-pro/img/card-${number}.jpg`"
     >
     </v-img>
     <v-sheet height="240px" class="d-flex flex-column">
@@ -22,7 +22,7 @@
               >mdi-close</v-icon
             >
           </template>
-          <span>Delete icon Button</span>
+          <span> {{ $t("Delete") }}</span>
         </v-tooltip>
         <div class="mx-2"></div>
         <v-tooltip bottom>
@@ -31,7 +31,7 @@
               >mdi-pencil</v-icon
             >
           </template>
-          <span>Edit icon Button</span>
+          <span> {{ $t("Edit") }}</span>
         </v-tooltip>
         <div class="mx-2"></div>
         <v-tooltip bottom>
@@ -40,7 +40,7 @@
               >mdi-share-variant</v-icon
             >
           </template>
-          <span>Share icon Button</span>
+          <span> {{ $t("Share") }}</span>
         </v-tooltip>
       </v-row>
     </v-sheet>
@@ -61,7 +61,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    number: {
+      type: Number,
+    },
+  },
+};
 </script>
 
 <style scoped>

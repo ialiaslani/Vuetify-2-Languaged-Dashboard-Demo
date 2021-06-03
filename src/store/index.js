@@ -10,6 +10,12 @@ export default new Vuex.Store({
     barColor: 'rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)',
     barImage: 'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-1.jpg',
     drawer: null,
+    selectedColor: 'pink'
+  },
+  getters: {
+    selectedColor: state => {
+      return state.selectedColor
+    }
   },
   mutations: {
     setBarImage(state, payload) {
@@ -18,6 +24,9 @@ export default new Vuex.Store({
     set_drawer(state, payload) {
       state.drawer = payload
     },
+    setColor(state, data) {
+      state.selectedColor = data
+    }
   },
   actions: {},
   modules: {

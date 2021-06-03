@@ -44,7 +44,7 @@
         </template>
         <v-list-item link class="rounded pa-0 d-flex">
           <router-link
-            :class="`/${$i18n.locale}/about` === $route.path ? 'pink' : ''"
+            :class="`/${$i18n.locale}/about` === $route.path ? activeClass : ''"
             :to="`/${$i18n.locale}/about`"
             class="text-decoration-none d-flex rounded px-4 py-4 white--text"
             style="min-width: 100%; min-height: 100%"
@@ -76,7 +76,7 @@
     <v-list class="pa-2">
       <v-list-item link class="px-0">
         <router-link
-          :class="`/${$i18n.locale}` === $route.path ? 'pink' : ''"
+          :class="`/${$i18n.locale}` === $route.path ? activeClass : ''"
           :to="`/${$i18n.locale}`"
           class="text-decoration-none d-flex rounded px-4 white--text"
           style="min-width: 100%"
@@ -98,27 +98,27 @@
           }}</v-list-item-title>
         </template>
 
-        <v-list-item active-class="pink white--text" link class="rounded">
+        <v-list-item :active-class="activeClass" link class="rounded">
           <h5 class="mx-1 font-weight-thin">{{ $t("navPR") }}</h5>
           <v-list-item-title class="font-weight-light">{{
             $t("navPricing")
           }}</v-list-item-title>
         </v-list-item>
-        <v-list-item active-class="pink white--text" class="rounded">
+        <v-list-item :active-class="activeClass" class="rounded">
           <h5 class="mx-1 font-weight-thin">{{ $t("navLP") }}</h5>
           <v-list-item-title class="font-weight-light">{{
             $t("navLoginPage")
           }}</v-list-item-title>
         </v-list-item>
 
-        <v-list-item active-class="pink white--text" class="rounded">
+        <v-list-item :active-class="activeClass" class="rounded">
           <h5 class="mx-1 font-weight-thin">{{ $t("navUP") }}</h5>
           <v-list-item-title class="font-weight-light">{{
             $t("navUserPage")
           }}</v-list-item-title>
         </v-list-item>
 
-        <v-list-item active-class="pink white--text" class="rounded">
+        <v-list-item :active-class="activeClass" class="rounded">
           <h5 class="mx-1 font-weight-thin">{{ $t("navEP") }}</h5>
           <v-list-item-title class="font-weight-light">{{
             $t("navErrorPage")
@@ -136,15 +136,34 @@
         }}</v-list-item-title>
       </v-list-item>
 
-      <v-list-item link class="rounded">
-        <v-list-item-icon>
-          <v-icon dense>mdi-map-marker</v-icon>
-        </v-list-item-icon>
+      <v-list-group active-class=" white--text" :value="true">
+        <template v-slot:activator>
+          <v-icon dense class="mr-3">mdi-map-marker</v-icon>
+          <v-list-item-title class="font-weight-light">{{
+            $t("navMaps")
+          }}</v-list-item-title>
+        </template>
 
-        <v-list-item-title class="font-weight-light">{{
-          $t("navMaps")
-        }}</v-list-item-title>
-      </v-list-item>
+        <v-list-item link :active-class="activeClass" class="rounded px-0">
+          <router-link
+            :class="`/${$i18n.locale}/maps` === $route.path ? activeClass : ''"
+            :to="`/${$i18n.locale}/maps`"
+            class="text-decoration-none d-flex rounded px-4 white--text py-4"
+            style="min-width: 100%"
+          >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navGP") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("googleMaps")
+            }}</v-list-item-title>
+          </router-link>
+        </v-list-item>
+        <v-list-item :active-class="activeClass" class="rounded">
+          <h5 class="mx-1 font-weight-thin">{{ $t("navFS") }}</h5>
+          <v-list-item-title class="font-weight-light">{{
+            $t("fullScreenMaps")
+          }}</v-list-item-title>
+        </v-list-item>
+      </v-list-group>
 
       <v-list-item link class="rounded">
         <v-list-item-icon>
@@ -171,7 +190,7 @@
 
 <script>
 // Utilities
-import { mapState } from "vuex";
+import { mapGetters, mapState } from "vuex";
 
 export default {
   props: {
@@ -182,6 +201,7 @@ export default {
   },
 
   computed: {
+    ...mapGetters(["selectedColor"]),
     ...mapState(["barColor", "barImage"]),
     drawer: {
       get() {
@@ -196,6 +216,9 @@ export default {
         avatar: true,
         title: "Ali Aslani",
       };
+    },
+    activeClass() {
+      return this.selectedColor + " text--white";
     },
   },
 };

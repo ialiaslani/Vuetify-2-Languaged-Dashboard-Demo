@@ -14,8 +14,8 @@
     </v-row>
     <h3 class="mx-5 my-9 font-weight-light">{{ $t("ManageListings") }}</h3>
     <v-row class="mx-4">
-      <v-col v-for="wc in 3" :key="wc" class="pa-0 my-10">
-        <listing-cards />
+      <v-col v-for="n in 3" :key="n" class="pa-0 my-10">
+        <listing-cards :number="n" />
       </v-col>
     </v-row>
     <DashboardFooter />
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import ChartCards from "../components/chartCards.vue";
 import DashboardFooter from "../components/Footer.vue";
 import globalSells from "../components/globalSells.vue";
@@ -40,8 +41,12 @@ export default {
     DrawerSetting,
   },
   data() {
-    return {
-      widgetCards: [
+    return {};
+  },
+  computed: {
+    ...mapGetters(["selectedColor"]),
+    widgetCards() {
+      return [
         {
           icon: "mdi-twitter",
           color: "cyan",
@@ -54,7 +59,7 @@ export default {
         },
         {
           icon: "mdi-poll",
-          color: "pink",
+          color: this.selectedColor,
           number: 75.521,
         },
         {
@@ -62,8 +67,8 @@ export default {
           color: "orange",
           number: 1762,
         },
-      ],
-    };
+      ];
+    },
   },
 };
 </script>

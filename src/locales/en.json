@@ -49,5 +49,19 @@
   "made": "made with",
   "by": "by",
   "CreativeTim": "Creative Tim",
-  "2019": "for a better web, 2019"
+  "2019": "for a better web, 2019",
+  "navGP": "GP",
+  "googleMaps": "Google Maps",
+  "navFS": "FS",
+  "fullScreenMaps": "Full Screen Maps",
+  "SatelliteMap": "Satellite Map",
+  "UnitedStates": "United States",
+  "Viewlargermap": "View larger map",
+  "Directions": "Directions",
+  "CustomSkinSettingsMap": "Custom Skin & Settings Map",
+  "Delete": "Delete",
+  "Edit": "Edit",
+  "Share": "Share",
+  "Color": "Colors",
+  "Images": "Images"
 }

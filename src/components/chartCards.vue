@@ -37,7 +37,7 @@
                 >mdi-pencil</v-icon
               >
             </template>
-            <span>Edti icon Button</span>
+            <span>{{ $t("Edit") }}</span>
           </v-tooltip>
           <div class="mx-2"></div>
           <v-tooltip bottom>
@@ -46,7 +46,7 @@
                 >mdi-share-variant</v-icon
               >
             </template>
-            <span>Share icon Button</span>
+            <span>{{ $t("Share") }}</span>
           </v-tooltip></v-row
         >
         <v-card-text class="pt-0">
@@ -103,7 +103,7 @@
                 >mdi-pencil</v-icon
               >
             </template>
-            <span>Edti icon Button</span>
+            <span>{{ $t("Edit") }}</span>
           </v-tooltip>
           <div class="mx-2"></div>
           <v-tooltip bottom>
@@ -112,7 +112,7 @@
                 >mdi-share-variant</v-icon
               >
             </template>
-            <span>Share icon Button</span>
+            <span>{{ $t("Share") }}</span>
           </v-tooltip>
         </v-row>
         <v-card-text class="pt-0">
@@ -137,7 +137,7 @@
       >
         <v-sheet
           class="v-sheet--offset mx-auto d-flex"
-          color="red"
+          :color="selectedColor"
           elevation="12"
           max-width="calc(100% - 32px)"
           min-height="150"
@@ -167,7 +167,7 @@
                 >mdi-pencil</v-icon
               >
             </template>
-            <span>Edti icon Button</span>
+            <span> {{ $t("Edit") }}</span>
           </v-tooltip>
           <div class="mx-2"></div>
           <v-tooltip bottom>
@@ -176,7 +176,7 @@
                 >mdi-share-variant</v-icon
               >
             </template>
-            <span>Share icon Button</span>
+            <span>{{ $t("Share") }}</span>
           </v-tooltip>
         </v-row>
         <v-card-text class="pt-0">
@@ -198,6 +198,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -209,6 +210,9 @@ export default {
       radius: 10,
       val: [0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0],
     };
+  },
+  computed: {
+    ...mapGetters(["selectedColor"]),
   },
 };
 </script>

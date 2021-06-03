@@ -1,4 +1,4 @@
-# Vuetify-2-Languaged-Dashboard-Demo
+# vuetify-material-dashboard-pro
 
 This Is An Admin Panel Developt By Sadr Engineering Wich Is Still In First Steps
 

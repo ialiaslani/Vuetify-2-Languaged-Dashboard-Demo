@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import i18n from '../i18n'
 import Dashboard from '../views/Dashboard.vue'
+import GoogleMaps from '../views/GoogleMaps.vue';
 
 Vue.use(VueRouter)
 
@@ -25,6 +26,11 @@ const routes = [{
         path: '/:lng/about',
         name: 'About',
         component: () => import( /* webpackChunkName: "about" */ '../views/About.vue')
+      },
+      {
+        path: '/:lng/maps',
+        name: "GoogleMaps",
+        component: GoogleMaps
       }
     ]
   }
