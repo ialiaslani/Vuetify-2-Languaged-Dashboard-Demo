@@ -16,11 +16,32 @@
       <v-spacer></v-spacer>
       <v-spacer></v-spacer>
       <v-row height="30px" align="center" justify="center">
-        <v-icon class="pt-10" color="info">mdi-account</v-icon>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-icon class="pt-10" v-bind="attrs" v-on="on" color="red"
+              >mdi-close</v-icon
+            >
+          </template>
+          <span>Delete icon Button</span>
+        </v-tooltip>
         <div class="mx-2"></div>
-        <v-icon class="pt-10" color="info">mdi-pencil</v-icon>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-icon class="pt-10" v-bind="attrs" v-on="on" color="success"
+              >mdi-pencil</v-icon
+            >
+          </template>
+          <span>Edit icon Button</span>
+        </v-tooltip>
         <div class="mx-2"></div>
-        <v-icon class="pt-10" color="info">mdi-share-variant</v-icon>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-icon class="pt-10" v-bind="attrs" v-on="on" color="info"
+              >mdi-share-variant</v-icon
+            >
+          </template>
+          <span>Share icon Button</span>
+        </v-tooltip>
       </v-row>
     </v-sheet>
     <v-card-title class="font-weight-light d-block text-center">{{

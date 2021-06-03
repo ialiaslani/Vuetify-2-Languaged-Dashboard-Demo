@@ -31,10 +31,24 @@
           justify="center"
         >
           <div class="mx-2"></div>
-          <v-icon color="info">mdi-pencil</v-icon>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-icon v-bind="attrs" v-on="on" color="success"
+                >mdi-pencil</v-icon
+              >
+            </template>
+            <span>Edti icon Button</span>
+          </v-tooltip>
           <div class="mx-2"></div>
-          <v-icon color="info">mdi-share-variant</v-icon>
-        </v-row>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-icon v-bind="attrs" v-on="on" color="cyan"
+                >mdi-share-variant</v-icon
+              >
+            </template>
+            <span>Share icon Button</span>
+          </v-tooltip></v-row
+        >
         <v-card-text class="pt-0">
           <div class="title font-weight-light mb-2">
             {{ $t("UserRegister") }}
@@ -82,9 +96,24 @@
           justify="center"
         >
           <div class="mx-2"></div>
-          <v-icon color="info">mdi-pencil</v-icon>
+
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-icon v-bind="attrs" v-on="on" color="success"
+                >mdi-pencil</v-icon
+              >
+            </template>
+            <span>Edti icon Button</span>
+          </v-tooltip>
           <div class="mx-2"></div>
-          <v-icon color="info">mdi-share-variant</v-icon>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-icon v-bind="attrs" v-on="on" color="cyan"
+                >mdi-share-variant</v-icon
+              >
+            </template>
+            <span>Share icon Button</span>
+          </v-tooltip>
         </v-row>
         <v-card-text class="pt-0">
           <div class="title font-weight-light mb-2">{{ $t("DailySells") }}</div>
@@ -132,9 +161,23 @@
           justify="center"
         >
           <div class="mx-2"></div>
-          <v-icon color="info">mdi-pencil</v-icon>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-icon v-bind="attrs" v-on="on" color="success"
+                >mdi-pencil</v-icon
+              >
+            </template>
+            <span>Edti icon Button</span>
+          </v-tooltip>
           <div class="mx-2"></div>
-          <v-icon color="info">mdi-share-variant</v-icon>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on, attrs }">
+              <v-icon v-bind="attrs" v-on="on" color="cyan"
+                >mdi-share-variant</v-icon
+              >
+            </template>
+            <span>Share icon Button</span>
+          </v-tooltip>
         </v-row>
         <v-card-text class="pt-0">
           <div class="title font-weight-light mb-2">

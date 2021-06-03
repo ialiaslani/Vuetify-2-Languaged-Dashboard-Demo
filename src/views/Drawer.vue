@@ -27,98 +27,108 @@
     </template>
 
     <v-divider class="mb-1 mx-3" />
-    <v-list id="avatar" class="pa-2">
-      <v-list-item-group active-class=" white--text" multiple>
-        <v-list-group class="rounded-lg" :value="true">
-          <template v-slot:activator>
-            <v-list-item-avatar
-              style="max-width: 15px !important"
-              class="align-self-center"
-              color="white"
-              contain
-            >
-              <v-img
-                src="https://demos.creative-tim.com/material-dashboard-pro/assets/img/faces/avatar.jpg"
-              />
-            </v-list-item-avatar>
-            <v-list-item-title v-text="$t('Admin')" />
-          </template>
-          <v-list-item class="rounded-lg" link>
+    <v-list id="avatar" class="pa-2 white--text">
+      <v-list-group active-class=" white--text" class="rounded" :value="true">
+        <template v-slot:activator>
+          <v-list-item-avatar
+            style="max-width: 15px !important"
+            class="align-self-center white--text"
+            color="white"
+            contain
+          >
+            <v-img
+              src="https://demos.creative-tim.com/material-dashboard-pro/assets/img/faces/avatar.jpg"
+            />
+          </v-list-item-avatar>
+          <v-list-item-title class="white--text" v-text="$t('Admin')" />
+        </template>
+        <v-list-item link class="rounded pa-0 d-flex">
+          <router-link
+            :class="`/${$i18n.locale}/about` === $route.path ? 'pink' : ''"
+            :to="`/${$i18n.locale}/about`"
+            class="text-decoration-none d-flex rounded px-4 py-4 white--text"
+            style="min-width: 100%; min-height: 100%"
+          >
             <h5 class="mx-1 font-weight-thin">{{ $t("navMP") }}</h5>
             <v-list-item-title class="font-weight-light">{{
               $t("navMyProfile")
             }}</v-list-item-title>
-          </v-list-item>
-          <v-list-item class="rounded-lg" link>
-            <h5 class="mx-1 font-weight-thin">{{ $t("navEP") }}</h5>
-            <v-list-item-title class="font-weight-light">{{
-              $t("navEditProfile")
-            }}</v-list-item-title>
-          </v-list-item>
+          </router-link>
+        </v-list-item>
+        <v-list-item link class="rounded">
+          <h5 class="mx-1 font-weight-thin">{{ $t("navEP") }}</h5>
+          <v-list-item-title class="font-weight-light">{{
+            $t("navEditProfile")
+          }}</v-list-item-title>
+        </v-list-item>
 
-          <v-list-item class="rounded-lg" link>
-            <h5 class="mx-1 font-weight-thin">{{ $t("navSE") }}</h5>
-            <v-list-item-title class="font-weight-light">{{
-              $t("navSettings")
-            }}</v-list-item-title>
-          </v-list-item>
-        </v-list-group>
-      </v-list-item-group>
+        <v-list-item link class="rounded">
+          <h5 class="mx-1 font-weight-thin">{{ $t("navSE") }}</h5>
+          <v-list-item-title class="font-weight-light">{{
+            $t("navSettings")
+          }}</v-list-item-title>
+        </v-list-item>
+      </v-list-group>
     </v-list>
 
     <v-divider class="mb-2 mx-3" />
 
     <v-list class="pa-2">
-      <v-list-item-group active-class="pink white--text" multiple>
-        <v-list-item link class="rounded-lg">
-          <v-list-item-icon>
-            <v-icon>mdi-view-dashboard</v-icon>
+      <v-list-item link class="px-0">
+        <router-link
+          :class="`/${$i18n.locale}` === $route.path ? 'pink' : ''"
+          :to="`/${$i18n.locale}`"
+          class="text-decoration-none d-flex rounded px-4 white--text"
+          style="min-width: 100%"
+          ><v-list-item-icon>
+            <v-icon dense>mdi-view-dashboard</v-icon>
           </v-list-item-icon>
 
-          <v-list-item-title class="font-weight-light">{{
+          <v-list-item-title class="font-weight-light text--white">{{
             $t("navDashboard")
+          }}</v-list-item-title></router-link
+        >
+      </v-list-item>
+
+      <v-list-group active-class=" white--text" :value="true">
+        <template v-slot:activator>
+          <v-icon dense class="mr-3">mdi-image</v-icon>
+          <v-list-item-title class="font-weight-light">{{
+            $t("navPictures")
+          }}</v-list-item-title>
+        </template>
+
+        <v-list-item active-class="pink white--text" link class="rounded">
+          <h5 class="mx-1 font-weight-thin">{{ $t("navPR") }}</h5>
+          <v-list-item-title class="font-weight-light">{{
+            $t("navPricing")
+          }}</v-list-item-title>
+        </v-list-item>
+        <v-list-item active-class="pink white--text" class="rounded">
+          <h5 class="mx-1 font-weight-thin">{{ $t("navLP") }}</h5>
+          <v-list-item-title class="font-weight-light">{{
+            $t("navLoginPage")
           }}</v-list-item-title>
         </v-list-item>
 
-        <v-list-group :value="true" prepend-icon="mdi-image">
-          <template v-slot:activator>
-            <v-list-item-title class="font-weight-light">{{
-              $t("navPictures")
-            }}</v-list-item-title>
-          </template>
+        <v-list-item active-class="pink white--text" class="rounded">
+          <h5 class="mx-1 font-weight-thin">{{ $t("navUP") }}</h5>
+          <v-list-item-title class="font-weight-light">{{
+            $t("navUserPage")
+          }}</v-list-item-title>
+        </v-list-item>
 
-          <v-list-item class="rounded-lg">
-            <h5 class="mx-1 font-weight-thin">{{ $t("navPR") }}</h5>
-            <v-list-item-title class="font-weight-light">{{
-              $t("navPricing")
-            }}</v-list-item-title>
-          </v-list-item>
-          <v-list-item class="rounded-lg">
-            <h5 class="mx-1 font-weight-thin">{{ $t("navLP") }}</h5>
-            <v-list-item-title class="font-weight-light">{{
-              $t("navLoginPage")
-            }}</v-list-item-title>
-          </v-list-item>
+        <v-list-item active-class="pink white--text" class="rounded">
+          <h5 class="mx-1 font-weight-thin">{{ $t("navEP") }}</h5>
+          <v-list-item-title class="font-weight-light">{{
+            $t("navErrorPage")
+          }}</v-list-item-title>
+        </v-list-item>
+      </v-list-group>
 
-          <v-list-item class="rounded-lg">
-            <h5 class="mx-1 font-weight-thin">{{ $t("navUP") }}</h5>
-            <v-list-item-title class="font-weight-light">{{
-              $t("navUserPage")
-            }}</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item class="rounded-lg">
-            <h5 class="mx-1 font-weight-thin">{{ $t("navEP") }}</h5>
-            <v-list-item-title class="font-weight-light">{{
-              $t("navErrorPage")
-            }}</v-list-item-title>
-          </v-list-item>
-        </v-list-group>
-      </v-list-item-group>
-
-      <v-list-item link class="rounded-lg">
+      <v-list-item link class="rounded">
         <v-list-item-icon>
-          <v-icon>mdi-clipboard-outline</v-icon>
+          <v-icon dense>mdi-clipboard-outline</v-icon>
         </v-list-item-icon>
 
         <v-list-item-title class="font-weight-light">{{
@@ -126,9 +136,9 @@
         }}</v-list-item-title>
       </v-list-item>
 
-      <v-list-item link class="rounded-lg">
+      <v-list-item link class="rounded">
         <v-list-item-icon>
-          <v-icon>mdi-map-marker</v-icon>
+          <v-icon dense>mdi-map-marker</v-icon>
         </v-list-item-icon>
 
         <v-list-item-title class="font-weight-light">{{
@@ -136,9 +146,9 @@
         }}</v-list-item-title>
       </v-list-item>
 
-      <v-list-item link class="rounded-lg">
+      <v-list-item link class="rounded">
         <v-list-item-icon>
-          <v-icon>mdi-widgets</v-icon>
+          <v-icon dense>mdi-widgets</v-icon>
         </v-list-item-icon>
 
         <v-list-item-title class="font-weight-light">{{
@@ -146,9 +156,9 @@
         }}</v-list-item-title>
       </v-list-item>
 
-      <v-list-item link class="rounded-lg">
+      <v-list-item link class="rounded">
         <v-list-item-icon>
-          <v-icon>mdi-chart-timeline</v-icon>
+          <v-icon dense>mdi-chart-timeline</v-icon>
         </v-list-item-icon>
 
         <v-list-item-title class="font-weight-light">{{
@@ -194,5 +204,9 @@ export default {
 <style>
 #avatar .v-list-group__header {
   padding: 0;
+}
+.v-application--is-ltr .v-list-item__action:first-child,
+.v-application--is-ltr .v-list-item__icon:first-child {
+  margin-right: 8px;
 }
 </style>

@@ -42,7 +42,7 @@
 
     <div class="mx-3" />
 
-    <v-btn class="ml-2" min-width="0" text :to="`/${$i18n.locale}/`">
+    <v-btn class="ml-2" min-width="0" text :to="`/${$i18n.locale}`">
       <v-icon>mdi-view-dashboard</v-icon>
     </v-btn>
 
@@ -56,24 +56,44 @@
         </v-btn>
       </template>
       <v-list>
-        <v-list-item link>
-          <v-list-item-title>{{ $t("nf1") }}</v-list-item-title>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-title>{{ $t("nf2") }}</v-list-item-title>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-title>{{ $t("nf3") }}</v-list-item-title>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-title>{{ $t("nf4") }}</v-list-item-title>
-        </v-list-item>
+        <v-list-item-group active-class="purple white--text">
+          <v-list-item link>
+            <v-list-item-title>{{ $t("nf1") }}</v-list-item-title>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-title>{{ $t("nf2") }}</v-list-item-title>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-title>{{ $t("nf3") }}</v-list-item-title>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-title>{{ $t("nf4") }}</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
       </v-list>
     </v-menu>
 
-    <v-btn class="ml-2" min-width="0" text :to="`/${$i18n.locale}/about`">
-      <v-icon>mdi-account</v-icon>
-    </v-btn>
+    <v-menu offset-y>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn v-bind="attrs" v-on="on" class="ml-2" min-width="0" text>
+          <v-icon>mdi-account</v-icon>
+        </v-btn>
+      </template>
+      <v-list class="pa-1">
+        <v-list-item-group active-class="purple white--text">
+          <v-list-item :to="`/${$i18n.locale}/about`" link>
+            <v-list-item-title>{{ $t("navMyProfile") }}</v-list-item-title>
+          </v-list-item>
+          <v-list-item link>
+            <v-list-item-title>{{ $t("navSettings") }}</v-list-item-title>
+          </v-list-item>
+          <v-divider></v-divider>
+          <v-list-item link>
+            <v-list-item-title>{{ $t("Logout") }}</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-menu>
 
     <div class="mx-3" />
 
