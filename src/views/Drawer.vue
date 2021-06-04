@@ -97,33 +97,50 @@
             $t("navPictures")
           }}</v-list-item-title>
         </template>
+        <v-list-item-group>
+          <v-list-item
+            link
+            :active-class="activeClass"
+            class="rounded white--text"
+          >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navPR") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navPricing")
+            }}</v-list-item-title>
+          </v-list-item>
+          <v-list-item
+            link
+            :active-class="activeClass"
+            class="rounded white--text"
+          >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navLP") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navLoginPage")
+            }}</v-list-item-title>
+          </v-list-item>
 
-        <v-list-item :active-class="activeClass" link class="rounded">
-          <h5 class="mx-1 font-weight-thin">{{ $t("navPR") }}</h5>
-          <v-list-item-title class="font-weight-light">{{
-            $t("navPricing")
-          }}</v-list-item-title>
-        </v-list-item>
-        <v-list-item :active-class="activeClass" class="rounded">
-          <h5 class="mx-1 font-weight-thin">{{ $t("navLP") }}</h5>
-          <v-list-item-title class="font-weight-light">{{
-            $t("navLoginPage")
-          }}</v-list-item-title>
-        </v-list-item>
+          <v-list-item
+            link
+            :active-class="activeClass"
+            class="rounded white--text"
+          >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navUP") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navUserPage")
+            }}</v-list-item-title>
+          </v-list-item>
 
-        <v-list-item :active-class="activeClass" class="rounded">
-          <h5 class="mx-1 font-weight-thin">{{ $t("navUP") }}</h5>
-          <v-list-item-title class="font-weight-light">{{
-            $t("navUserPage")
-          }}</v-list-item-title>
-        </v-list-item>
-
-        <v-list-item :active-class="activeClass" class="rounded">
-          <h5 class="mx-1 font-weight-thin">{{ $t("navEP") }}</h5>
-          <v-list-item-title class="font-weight-light">{{
-            $t("navErrorPage")
-          }}</v-list-item-title>
-        </v-list-item>
+          <v-list-item
+            link
+            :active-class="activeClass"
+            class="rounded white--text"
+          >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navEP") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navErrorPage")
+            }}</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
       </v-list-group>
 
       <v-list-item link class="rounded">
@@ -143,26 +160,33 @@
             $t("navMaps")
           }}</v-list-item-title>
         </template>
-
-        <v-list-item link :active-class="activeClass" class="rounded px-0">
-          <router-link
-            :class="`/${$i18n.locale}/maps` === $route.path ? activeClass : ''"
-            :to="`/${$i18n.locale}/maps`"
-            class="text-decoration-none d-flex rounded px-4 white--text py-4"
-            style="min-width: 100%"
+        <v-list-item-group>
+          <v-list-item link :active-class="activeClass" class="rounded px-0">
+            <router-link
+              :class="
+                `/${$i18n.locale}/maps` === $route.path ? activeClass : ''
+              "
+              :to="`/${$i18n.locale}/maps`"
+              class="text-decoration-none d-flex rounded px-4 white--text py-4"
+              style="min-width: 100%"
+            >
+              <h5 class="mx-1 font-weight-thin">{{ $t("navGP") }}</h5>
+              <v-list-item-title class="font-weight-light">{{
+                $t("googleMaps")
+              }}</v-list-item-title>
+            </router-link>
+          </v-list-item>
+          <v-list-item
+            link
+            :active-class="activeClass"
+            class="rounded white--text"
           >
-            <h5 class="mx-1 font-weight-thin">{{ $t("navGP") }}</h5>
+            <h5 class="mx-1 font-weight-thin">{{ $t("navFS") }}</h5>
             <v-list-item-title class="font-weight-light">{{
-              $t("googleMaps")
+              $t("fullScreenMaps")
             }}</v-list-item-title>
-          </router-link>
-        </v-list-item>
-        <v-list-item :active-class="activeClass" class="rounded">
-          <h5 class="mx-1 font-weight-thin">{{ $t("navFS") }}</h5>
-          <v-list-item-title class="font-weight-light">{{
-            $t("fullScreenMaps")
-          }}</v-list-item-title>
-        </v-list-item>
+          </v-list-item>
+        </v-list-item-group>
       </v-list-group>
 
       <v-list-item link class="rounded">
