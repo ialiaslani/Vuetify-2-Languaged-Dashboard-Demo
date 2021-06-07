@@ -52,7 +52,14 @@
             width="60"
             style="position: absolute; bottom: 10%; z-index: 2"
             :class="$i18n.locale != 'ps' ? 'right-15' : 'left-15'"
-            class="d-flex justify-center align-center flex-column rounded-sm mx-3"
+            class="
+              d-flex
+              justify-center
+              align-center
+              flex-column
+              rounded-sm
+              mx-3
+            "
           >
             <v-btn block><v-icon medium color="black"> mdi-plus </v-icon></v-btn
             ><v-btn block
@@ -66,7 +73,14 @@
             width="60"
             style="position: absolute; bottom: 10%; z-index: 2"
             :class="$i18n.locale == 'ps' ? 'right-15' : 'left-15'"
-            class="d-flex justify-center align-center flex-column rounded-sm mx-3"
+            class="
+              d-flex
+              justify-center
+              align-center
+              flex-column
+              rounded-sm
+              mx-3
+            "
           >
             <v-img src="../assets/acf-google-map-field-interface.png" />
           </v-sheet>
@@ -130,7 +144,14 @@
             width="60"
             style="position: absolute; bottom: 10%; z-index: 2"
             :class="$i18n.locale != 'ps' ? 'right-15' : 'left-15'"
-            class="d-flex justify-center align-center flex-column rounded-sm mx-3"
+            class="
+              d-flex
+              justify-center
+              align-center
+              flex-column
+              rounded-sm
+              mx-3
+            "
           >
             <v-btn block><v-icon medium color="black"> mdi-plus </v-icon></v-btn
             ><v-btn block
@@ -144,7 +165,14 @@
             width="60"
             style="position: absolute; bottom: 10%; z-index: 2"
             :class="$i18n.locale == 'ps' ? 'right-15' : 'left-15'"
-            class="d-flex justify-center align-center flex-column rounded-sm mx-3"
+            class="
+              d-flex
+              justify-center
+              align-center
+              flex-column
+              rounded-sm
+              mx-3
+            "
           >
             <v-img src="../assets/acf-google-map-field-interface.png" />
           </v-sheet>
@@ -206,7 +234,14 @@
             width="60"
             style="position: absolute; bottom: 10%; z-index: 2"
             :class="$i18n.locale != 'ps' ? 'right-15' : 'left-15'"
-            class="d-flex justify-center align-center flex-column rounded-sm mx-3"
+            class="
+              d-flex
+              justify-center
+              align-center
+              flex-column
+              rounded-sm
+              mx-3
+            "
           >
             <v-btn block><v-icon medium color="black"> mdi-plus </v-icon></v-btn
             ><v-btn block
@@ -221,7 +256,14 @@
             width="60"
             style="position: absolute; bottom: 10%; z-index: 2"
             :class="$i18n.locale == 'ps' ? 'right-15' : 'left-15'"
-            class="d-flex justify-center align-center flex-column rounded-sm mx-3"
+            class="
+              d-flex
+              justify-center
+              align-center
+              flex-column
+              rounded-sm
+              mx-3
+            "
           >
             <v-img src="../assets/acf-google-map-field-interface.png" />
           </v-sheet>

@@ -219,6 +219,8 @@ export default {
 
 <style>
 .v-sheet--offset {
+  top: -24px;
+  position: relative;
   transition: 300ms;
 }
 .chartCard:hover .v-sheet--offset {

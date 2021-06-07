@@ -32,9 +32,12 @@
       color="secondary"
       hide-details
       style="max-width: 165px"
+      v-model="search"
+      required
+      @keyup.enter="postExample()"
     >
       <template v-slot:append-outer>
-        <v-btn class="mt-n2" elevation="1" fab small>
+        <v-btn @click="postExample()" class="mt-n2" elevation="1" fab small>
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
       </template>
@@ -107,11 +110,18 @@
       overflow
       style="max-width: 100px"
     ></v-overflow-btn>
+    <v-alert
+      style="position: fixed; lef: 40%"
+      v-model="alertBool"
+      type="success"
+      dismissible
+      >Search Word Was Created</v-alert
+    >
   </v-app-bar>
 </template>
 
 <script>
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapMutations, mapGetters } from "vuex";
 import i18n from "../i18n";
 export default {
   name: "Dashboard",
@@ -129,6 +139,7 @@ export default {
       { title: "You're now friends with Andrew" },
       { title: "Another Notification" },
     ],
+    search: "",
   }),
   created() {
     if (i18n.locale == "ps") this.$vuetify.rtl = true;
@@ -136,6 +147,15 @@ export default {
   },
   computed: {
     ...mapState(["drawer"]),
+    ...mapGetters(["alert"]),
+    alertBool: {
+      get() {
+        return this.alert;
+      },
+      set() {
+        this.$store.commit("post_example");
+      },
+    },
     isMobile() {
       return window.innerWidth;
     },
@@ -149,6 +169,16 @@ export default {
       if (val == "ps") this.$vuetify.rtl = true;
       else if (val == "en") this.$vuetify.rtl = false;
       this.$router.push({ params: { lng: val } });
+    },
+    postExample() {
+      if (this.search != "") {
+        this.$store.dispatch("POST_EXAMPLE", {
+          title: "Search",
+          userId: 110,
+          body: this.search,
+        });
+        this.search = "";
+      } else if (this.search == "") alert("Search Field Is Empty");
     },
   },
 };
