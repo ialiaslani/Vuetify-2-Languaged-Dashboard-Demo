@@ -13,7 +13,11 @@ export default new Vuex.Store({
     drawer: null,
     selectedColor: 'pink',
     alert: false,
-    alertMessage: ''
+    alertMessage: {
+      type: 'success',
+      body: ''
+    },
+    tempSearch: ''
   },
   getters: {
     selectedColor: state => {
@@ -24,6 +28,9 @@ export default new Vuex.Store({
     },
     alertMessage: state => {
       return state.alertMessage
+    },
+    tempSearch: state => {
+      return state.tempSearch
     }
   },
   mutations: {
@@ -39,14 +46,26 @@ export default new Vuex.Store({
     post_example: (state, data) => {
       state.alert = !state.alert
       state.alertMessage = data
+    },
+    temp_search: (state, data) => {
+      state.tempSearch = data
     }
   },
   actions: {
     POST_EXAMPLE: async (contaxt, data) => {
+      contaxt.commit('temp_search', data.body)
       await axios.post('https://jsonplaceholder.typicode.com/posts', data).then(res => {
-        contaxt.commit('post_example', res.data.body)
+        contaxt.commit('post_example', {
+          type: 'success',
+          body: res.data.body
+        })
+        contaxt.commit('temp_search', "")
       }).catch(e => {
-        console.log(e);
+        contaxt.commit('post_example', {
+          type: 'error',
+          body: data.body
+        })
+        contaxt.commit('temp_search', "")
       })
     }
   },

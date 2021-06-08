@@ -26,7 +26,17 @@
     />
 
     <v-spacer />
-
+    <v-text-field
+      :label="$t('TempSearch')"
+      class="mx-3 mb-2"
+      color="secondary"
+      hide-details
+      style="max-width: 120px"
+      v-model="tempSearch"
+      required
+      readonly
+    >
+    </v-text-field>
     <v-text-field
       :label="$t('search')"
       color="secondary"
@@ -113,9 +123,9 @@
     <v-alert
       style="position: fixed; lef: 40%"
       v-model="alertBool"
-      type="success"
+      :type="alertMessage.type"
       dismissible
-      >Search Word {{ alertMessage }} Was Created</v-alert
+      >Search Word {{ alertMessage.body }}, {{ alertMessage.type }}</v-alert
     >
   </v-app-bar>
 </template>
@@ -147,13 +157,16 @@ export default {
   },
   computed: {
     ...mapState(["drawer"]),
-    ...mapGetters(["alert", "alertMessage"]),
+    ...mapGetters(["alert", "alertMessage", "tempSearch"]),
     alertBool: {
       get() {
         return this.alert;
       },
       set() {
-        this.$store.commit("post_example");
+        this.$store.commit("post_example", {
+          type: "success",
+          body: "",
+        });
       },
     },
     isMobile() {
@@ -171,6 +184,12 @@ export default {
       this.$router.push({ params: { lng: val } });
     },
     postExample() {
+      if (this.alertBool) {
+        this.$store.commit("post_example", {
+          type: "success",
+          body: "",
+        });
+      }
       if (this.search != "") {
         this.$store.dispatch("POST_EXAMPLE", {
           title: "Search",
