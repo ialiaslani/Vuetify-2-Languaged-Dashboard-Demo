@@ -115,7 +115,7 @@
       v-model="alertBool"
       type="success"
       dismissible
-      >Search Word Was Created</v-alert
+      >Search Word {{ alertMessage }} Was Created</v-alert
     >
   </v-app-bar>
 </template>
@@ -147,7 +147,7 @@ export default {
   },
   computed: {
     ...mapState(["drawer"]),
-    ...mapGetters(["alert"]),
+    ...mapGetters(["alert", "alertMessage"]),
     alertBool: {
       get() {
         return this.alert;

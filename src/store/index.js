@@ -12,7 +12,8 @@ export default new Vuex.Store({
     barImage: 'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-1.jpg',
     drawer: null,
     selectedColor: 'pink',
-    alert: false
+    alert: false,
+    alertMessage: ''
   },
   getters: {
     selectedColor: state => {
@@ -20,6 +21,9 @@ export default new Vuex.Store({
     },
     alert: state => {
       return state.alert
+    },
+    alertMessage: state => {
+      return state.alertMessage
     }
   },
   mutations: {
@@ -32,14 +36,17 @@ export default new Vuex.Store({
     setColor(state, data) {
       state.selectedColor = data
     },
-    post_example: state => {
+    post_example: (state, data) => {
       state.alert = !state.alert
+      state.alertMessage = data
     }
   },
   actions: {
     POST_EXAMPLE: async (contaxt, data) => {
       await axios.post('https://jsonplaceholder.typicode.com/posts', data).then(res => {
-        contaxt.commit('post_example')
+        contaxt.commit('post_example', res.data.body)
+      }).catch(e => {
+        console.log(e);
       })
     }
   },
