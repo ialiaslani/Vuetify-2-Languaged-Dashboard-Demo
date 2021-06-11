@@ -28,7 +28,7 @@
 
     <v-divider class="mb-1 mx-3" />
     <v-list id="avatar" class="pa-2 white--text">
-      <v-list-group active-class=" white--text" class="rounded" :value="true">
+      <v-list-group active-class="white--text" class="rounded" :value="true">
         <template v-slot:activator>
           <v-list-item-avatar
             style="max-width: 15px !important"
@@ -55,18 +55,36 @@
             }}</v-list-item-title>
           </router-link>
         </v-list-item>
-        <v-list-item link class="rounded">
-          <h5 class="mx-1 font-weight-thin">{{ $t("navEP") }}</h5>
-          <v-list-item-title class="font-weight-light">{{
-            $t("navEditProfile")
-          }}</v-list-item-title>
+        <v-list-item link class="rounded pa-0 d-flex">
+          <router-link
+            :class="
+              `/${$i18n.locale}/EditProfile` === $route.path ? activeClass : ''
+            "
+            :to="`/${$i18n.locale}/EditProfile`"
+            class="text-decoration-none d-flex rounded px-4 py-4 white--text"
+            style="min-width: 100%; min-height: 100%"
+          >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navEP") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navEditProfile")
+            }}</v-list-item-title>
+          </router-link>
         </v-list-item>
 
-        <v-list-item link class="rounded">
-          <h5 class="mx-1 font-weight-thin">{{ $t("navSE") }}</h5>
-          <v-list-item-title class="font-weight-light">{{
-            $t("navSettings")
-          }}</v-list-item-title>
+        <v-list-item link class="rounded pa-0 d-flex">
+          <router-link
+            :class="
+              `/${$i18n.locale}/Settings` === $route.path ? activeClass : ''
+            "
+            :to="`/${$i18n.locale}/Settings`"
+            class="text-decoration-none d-flex rounded px-4 py-4 white--text"
+            style="min-width: 100%; min-height: 100%"
+          >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navSE") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("navSettings")
+            }}</v-list-item-title>
+          </router-link>
         </v-list-item>
       </v-list-group>
     </v-list>
@@ -143,14 +161,21 @@
         </v-list-item-group>
       </v-list-group>
 
-      <v-list-item link class="rounded">
-        <v-list-item-icon>
-          <v-icon dense>mdi-clipboard-outline</v-icon>
-        </v-list-item-icon>
+      <v-list-item link class="rounded pa-0">
+        <router-link
+          :class="`/${$i18n.locale}/Form` === $route.path ? activeClass : ''"
+          :to="`/${$i18n.locale}/Form`"
+          class="text-decoration-none d-flex rounded px-4 white--text"
+          style="min-width: 100%"
+        >
+          <v-list-item-icon>
+            <v-icon dense>mdi-clipboard-outline</v-icon>
+          </v-list-item-icon>
 
-        <v-list-item-title class="font-weight-light">{{
-          $t("navForms")
-        }}</v-list-item-title>
+          <v-list-item-title class="font-weight-light">{{
+            $t("navForms")
+          }}</v-list-item-title>
+        </router-link>
       </v-list-item>
 
       <v-list-group active-class=" white--text" :value="true">
@@ -189,24 +214,38 @@
         </v-list-item-group>
       </v-list-group>
 
-      <v-list-item link class="rounded">
-        <v-list-item-icon>
-          <v-icon dense>mdi-widgets</v-icon>
-        </v-list-item-icon>
+      <v-list-item link class="rounded pa-0">
+        <router-link
+          :class="`/${$i18n.locale}/Widgets` === $route.path ? activeClass : ''"
+          :to="`/${$i18n.locale}/Widgets`"
+          class="text-decoration-none d-flex rounded px-4 white--text"
+          style="min-width: 100%"
+        >
+          <v-list-item-icon>
+            <v-icon dense>mdi-widgets</v-icon>
+          </v-list-item-icon>
 
-        <v-list-item-title class="font-weight-light">{{
-          $t("navWidgets")
-        }}</v-list-item-title>
+          <v-list-item-title class="font-weight-light">{{
+            $t("navWidgets")
+          }}</v-list-item-title>
+        </router-link>
       </v-list-item>
 
-      <v-list-item link class="rounded">
-        <v-list-item-icon>
-          <v-icon dense>mdi-chart-timeline</v-icon>
-        </v-list-item-icon>
+      <v-list-item link class="rounded pa-0">
+        <router-link
+          :class="`/${$i18n.locale}/Charts` === $route.path ? activeClass : ''"
+          :to="`/${$i18n.locale}/Charts`"
+          class="text-decoration-none d-flex rounded px-4 white--text"
+          style="min-width: 100%"
+        >
+          <v-list-item-icon>
+            <v-icon dense>mdi-chart-timeline</v-icon>
+          </v-list-item-icon>
 
-        <v-list-item-title class="font-weight-light">{{
-          $t("navCharts")
-        }}</v-list-item-title>
+          <v-list-item-title class="font-weight-light">{{
+            $t("navCharts")
+          }}</v-list-item-title>
+        </router-link>
       </v-list-item>
     </v-list>
   </v-navigation-drawer>
