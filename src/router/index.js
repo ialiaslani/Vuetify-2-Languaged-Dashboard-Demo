@@ -31,6 +31,36 @@ const routes = [{
         path: '/:lng/maps',
         name: "GoogleMaps",
         component: GoogleMaps
+      },
+      {
+        path: '/:lng/EditProfile'
+      },
+      {
+        path: '/:lng/Settings'
+      },
+      {
+        path: '/:lng/Pricing'
+      },
+      {
+        path: '/:lng/LoginPage'
+      },
+      {
+        path: '/:lng/UserPage'
+      },
+      {
+        path: '/:lng/ErrorPage'
+      },
+      {
+        path: '/:lng/Form'
+      },
+      {
+        path: '/:lng/fullScreenMaps'
+      },
+      {
+        path: '/:lng/Widgets'
+      },
+      {
+        path: '/:lng/Charts'
       }
     ]
   }
