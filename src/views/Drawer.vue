@@ -28,7 +28,7 @@
 
     <v-divider class="mb-1 mx-3" />
     <v-list id="avatar" class="pa-2 white--text">
-      <v-list-group active-class="white--text" class="rounded" :value="true">
+      <v-list-group active-class="white--text" class="rounded">
         <template v-slot:activator>
           <v-list-item-avatar
             style="max-width: 15px !important"
@@ -108,57 +108,91 @@
         >
       </v-list-item>
 
-      <v-list-group active-class=" white--text" :value="true">
+      <v-list-group active-class="white--text" class="rounded">
         <template v-slot:activator>
           <v-icon dense class="mr-3">mdi-image</v-icon>
           <v-list-item-title class="font-weight-light">{{
             $t("navPictures")
           }}</v-list-item-title>
         </template>
-        <v-list-item-group>
-          <v-list-item
-            link
-            :active-class="activeClass"
-            class="rounded white--text"
+        <v-list-item
+          link
+          active-class="white--text"
+          class="rounded white--text pa-0"
+        >
+          <router-link
+            :class="
+              `/${$i18n.locale}/Pricing` === $route.path ? activeClass : ''
+            "
+            :to="`/${$i18n.locale}/Pricing`"
+            class="text-decoration-none d-flex rounded px-4 py-4 white--text"
+            style="min-width: 100%"
           >
             <h5 class="mx-1 font-weight-thin">{{ $t("navPR") }}</h5>
             <v-list-item-title class="font-weight-light">{{
               $t("navPricing")
             }}</v-list-item-title>
-          </v-list-item>
-          <v-list-item
-            link
-            :active-class="activeClass"
-            class="rounded white--text"
+          </router-link>
+        </v-list-item>
+        <v-list-item
+          link
+          active-class="white--text"
+          class="rounded white--text pa-0"
+        >
+          <router-link
+            :class="
+              `/${$i18n.locale}/LoginPage` === $route.path ? activeClass : ''
+            "
+            :to="`/${$i18n.locale}/LoginPage`"
+            class="text-decoration-none d-flex rounded px-4 py-4 white--text"
+            style="min-width: 100%"
           >
             <h5 class="mx-1 font-weight-thin">{{ $t("navLP") }}</h5>
             <v-list-item-title class="font-weight-light">{{
               $t("navLoginPage")
             }}</v-list-item-title>
-          </v-list-item>
+          </router-link>
+        </v-list-item>
 
-          <v-list-item
-            link
-            :active-class="activeClass"
-            class="rounded white--text"
+        <v-list-item
+          link
+          active-class="white--text"
+          class="rounded white--text pa-0"
+        >
+          <router-link
+            :class="
+              `/${$i18n.locale}/UserPage` === $route.path ? activeClass : ''
+            "
+            :to="`/${$i18n.locale}/UserPage`"
+            class="text-decoration-none d-flex rounded px-4 py-4 white--text"
+            style="min-width: 100%"
           >
             <h5 class="mx-1 font-weight-thin">{{ $t("navUP") }}</h5>
             <v-list-item-title class="font-weight-light">{{
               $t("navUserPage")
             }}</v-list-item-title>
-          </v-list-item>
+          </router-link>
+        </v-list-item>
 
-          <v-list-item
-            link
-            :active-class="activeClass"
-            class="rounded white--text"
+        <v-list-item
+          link
+          active-class="white--text"
+          class="rounded white--text pa-0"
+        >
+          <router-link
+            :class="
+              `/${$i18n.locale}/ErrorPage` === $route.path ? activeClass : ''
+            "
+            :to="`/${$i18n.locale}/ErrorPage`"
+            class="text-decoration-none d-flex rounded px-4 py-4 white--text"
+            style="min-width: 100%"
           >
             <h5 class="mx-1 font-weight-thin">{{ $t("navEP") }}</h5>
             <v-list-item-title class="font-weight-light">{{
               $t("navErrorPage")
             }}</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
+          </router-link>
+        </v-list-item>
       </v-list-group>
 
       <v-list-item link class="rounded pa-0">
@@ -178,40 +212,47 @@
         </router-link>
       </v-list-item>
 
-      <v-list-group active-class=" white--text" :value="true">
+      <v-list-group active-class=" white--text">
         <template v-slot:activator>
           <v-icon dense class="mr-3">mdi-map-marker</v-icon>
           <v-list-item-title class="font-weight-light">{{
             $t("navMaps")
           }}</v-list-item-title>
         </template>
-        <v-list-item-group>
-          <v-list-item link :active-class="activeClass" class="rounded px-0">
-            <router-link
-              :class="
-                `/${$i18n.locale}/maps` === $route.path ? activeClass : ''
-              "
-              :to="`/${$i18n.locale}/maps`"
-              class="text-decoration-none d-flex rounded px-4 white--text py-4"
-              style="min-width: 100%"
-            >
-              <h5 class="mx-1 font-weight-thin">{{ $t("navGP") }}</h5>
-              <v-list-item-title class="font-weight-light">{{
-                $t("googleMaps")
-              }}</v-list-item-title>
-            </router-link>
-          </v-list-item>
-          <v-list-item
-            link
-            :active-class="activeClass"
-            class="rounded white--text"
+        <v-list-item link :active-class="activeClass" class="rounded px-0">
+          <router-link
+            :class="`/${$i18n.locale}/maps` === $route.path ? activeClass : ''"
+            :to="`/${$i18n.locale}/maps`"
+            class="text-decoration-none d-flex rounded px-4 white--text py-4"
+            style="min-width: 100%"
+          >
+            <h5 class="mx-1 font-weight-thin">{{ $t("navGP") }}</h5>
+            <v-list-item-title class="font-weight-light">{{
+              $t("googleMaps")
+            }}</v-list-item-title>
+          </router-link>
+        </v-list-item>
+        <v-list-item
+          link
+          active-class="white--text"
+          class="rounded white--text pa-0"
+        >
+          <router-link
+            :class="
+              `/${$i18n.locale}/fullScreenMaps` === $route.path
+                ? activeClass
+                : ''
+            "
+            :to="`/${$i18n.locale}/fullScreenMaps`"
+            class="text-decoration-none d-flex rounded px-4 py-4 white--text"
+            style="min-width: 100%"
           >
             <h5 class="mx-1 font-weight-thin">{{ $t("navFS") }}</h5>
             <v-list-item-title class="font-weight-light">{{
               $t("fullScreenMaps")
             }}</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
+          </router-link>
+        </v-list-item>
       </v-list-group>
 
       <v-list-item link class="rounded pa-0">
